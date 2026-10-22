@@ -9,6 +9,8 @@
 
   <meta name="description" content="V-Fitt2 Health & Wellness - स्वास्थ्य, सफलता, व्यक्तिगत विकास और बेहतर जीवन की दिशा में आपका साथी।">
 
+  <meta name="theme-color" content="#166534">
+
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
@@ -105,7 +107,7 @@
   </section>
 
 
-  <!-- FEATURES -->
+  <!-- FEATURES SECTION -->
   <section class="bg-green-50 py-14 px-4">
     <div class="max-w-6xl mx-auto">
 
@@ -149,6 +151,33 @@
         </div>
 
       </div>
+    </div>
+  </section>
+
+
+  <!-- V-FITT WELLNESS SATHI SECTION -->
+  <section id="wellness-sathi" class="py-12 px-4 bg-white">
+    <div class="max-w-4xl mx-auto text-center bg-green-50 rounded-2xl p-8 shadow-sm">
+
+      <div class="text-5xl mb-4">🌿</div>
+
+      <h2 class="text-2xl md:text-3xl font-bold text-green-800 mb-4">
+        V-Fitt Wellness Sathi
+      </h2>
+
+      <p class="text-gray-600 mb-6 leading-7">
+        स्वास्थ्य और वेलनेस से जुड़ी जानकारी प्राप्त करें।
+        अपने स्वास्थ्य जागरूकता के सफर की शुरुआत करें।
+      </p>
+
+      <a
+        href="https://v-fitt-wellness-sathi.lovable.app"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block green-button font-bold px-7 py-3 rounded-full shadow">
+        Wellness Sathi खोलें →
+      </a>
+
     </div>
   </section>
 
@@ -273,7 +302,7 @@
   </footer>
 
 
-  <!-- FORM CONNECTION: GOOGLE SHEETS + GMAIL + WHATSAPP -->
+  <!-- GOOGLE SHEETS + WHATSAPP FORM CONNECTION -->
   <script>
     const WEB_APP_URL =
       "https://script.google.com/macros/s/AKfycbzVwNzUwrcEmC7WsF7Ew1dFOGnRGQO9PJ54ywzJvjqaZ1AG6LX1HoRQOBPZ7-WyouPV/exec";
@@ -323,11 +352,9 @@
           "https://wa.me/917703023914?text=" +
           encodeURIComponent(whatsappText);
 
-        // WhatsApp ko user ke click ke dauran kholne ki koshish
         const whatsappWindow =
           window.open(whatsappUrl, "_blank");
 
-        // Google Apps Script ko form data bhejna
         submitButton.disabled = true;
         submitButton.textContent = "भेजा जा रहा है...";
 
@@ -357,7 +384,7 @@
 
         if (!whatsappWindow) {
           status.textContent =
-            "WhatsApp नहीं खुला। पॉप-अप अनुमति दें या WhatsApp लिंक पर टैप करें।";
+            "WhatsApp नहीं खुला। पॉप-अप अनुमति दें या WhatsApp लिंक खोलें।";
         }
       }
     );

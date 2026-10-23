@@ -4,391 +4,283 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>V-Fitt2 | स्वास्थ्य और सफलता का सूत्र</title>
-
-  <meta name="description" content="V-Fitt2 Health & Wellness - स्वास्थ्य, सफलता, व्यक्तिगत विकास और बेहतर जीवन की दिशा में आपका साथी।">
-
+  <meta name="description" content="V-Fitt2 Health & Wellness - Health awareness, personal growth and success.">
   <meta name="theme-color" content="#166534">
-
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, "Noto Sans Devanagari", sans-serif;
-    }
-
-    .hero-bg {
-      background: linear-gradient(135deg, #064e3b, #166534, #14532d);
-    }
-
-    .green-button {
-      background: #15803d;
-      color: white;
-      transition: 0.2s;
-    }
-
-    .green-button:hover {
-      background: #166534;
-    }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, "Noto Sans Devanagari", sans-serif; }
+    .hero-bg { background: linear-gradient(135deg,#064e3b,#166534,#14532d); }
+    .green-button { background:#15803d; color:white; transition:.2s; }
+    .green-button:hover { background:#166534; }
+    .lang-button { border:1px solid #15803d; padding:8px 13px; border-radius:999px; font-weight:bold; }
+    .lang-button.active { background:#15803d; color:white; }
   </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- HEADER -->
-  <header class="bg-white shadow-md">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-3">
+<header class="bg-white shadow-md">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-3">
+    <div>
+      <h1 class="text-2xl font-extrabold text-green-800">V-FITT2</h1>
+      <p class="text-sm text-gray-600" data-hi="स्वास्थ्य और सफलता का सूत्र" data-en="The Formula for Health and Success">स्वास्थ्य और सफलता का सूत्र</p>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <button type="button" class="lang-button active" id="hindiBtn" onclick="setLanguage('hi')">हिंदी</button>
+      <button type="button" class="lang-button" id="englishBtn" onclick="setLanguage('en')">English</button>
+      <a href="#contact" class="green-button px-5 py-2 rounded-full font-semibold" data-hi="जुड़ें" data-en="Connect">जुड़ें</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero-bg text-white">
+  <div class="max-w-6xl mx-auto px-5 py-16 md:py-24 text-center">
+    <p class="text-green-200 font-semibold mb-3">V-Fitt2 Health & Wellness</p>
+
+    <h2 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6"
+        data-hi="बेहतर स्वास्थ्य,<br>बेहतर सोच, बेहतर भविष्य"
+        data-en="Better Health,<br>Better Thinking, Better Future">
+      बेहतर स्वास्थ्य,<br>बेहतर सोच, बेहतर भविष्य
+    </h2>
+
+    <p class="text-lg md:text-xl text-green-50 max-w-2xl mx-auto mb-8"
+       data-hi="स्वास्थ्य शिक्षा, व्यक्तिगत विकास और सफलता की दिशा में अपने सफर की शुरुआत करें।"
+       data-en="Begin your journey toward health education, personal growth and success.">
+      स्वास्थ्य शिक्षा, व्यक्तिगत विकास और सफलता की दिशा में अपने सफर की शुरुआत करें।
+    </p>
+
+    <a href="#contact" class="inline-block bg-white text-green-800 font-bold px-7 py-3 rounded-full shadow hover:bg-green-100"
+       data-hi="आज ही संपर्क करें" data-en="Contact Us Today">आज ही संपर्क करें</a>
+  </div>
+</section>
+
+<section class="py-14 px-4">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-green-800 mb-5"
+        data-hi="V-Fitt2 के बारे में" data-en="About V-Fitt2">V-Fitt2 के बारे में</h2>
+
+    <p class="text-lg leading-8 text-gray-600"
+       data-hi="V-Fitt2 का उद्देश्य स्वास्थ्य और सफलता के प्रति जागरूकता बढ़ाना है। सही जानकारी, अच्छी आदतें और लगातार सीखने की सोच से अपने जीवन को बेहतर बनाने की दिशा में कदम बढ़ाएँ।"
+       data-en="V-Fitt2 aims to promote awareness about health and success. Take steps toward a better life through reliable information, healthy habits and a mindset of continuous learning.">
+      V-Fitt2 का उद्देश्य स्वास्थ्य और सफलता के प्रति जागरूकता बढ़ाना है। सही जानकारी, अच्छी आदतें और लगातार सीखने की सोच से अपने जीवन को बेहतर बनाने की दिशा में कदम बढ़ाएँ।
+    </p>
+  </div>
+</section>
+
+<section class="bg-green-50 py-14 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-green-800 mb-10"
+        data-hi="हमारे मुख्य विषय" data-en="Our Key Topics">हमारे मुख्य विषय</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl p-6 shadow-sm">
+        <div class="text-4xl mb-4">🌿</div>
+        <h3 class="text-xl font-bold mb-3" data-hi="स्वास्थ्य जागरूकता" data-en="Health Awareness">स्वास्थ्य जागरूकता</h3>
+        <p class="text-gray-600 leading-7"
+           data-hi="स्वस्थ जीवनशैली, अच्छी आदतों और स्वास्थ्य शिक्षा के बारे में जानकारी प्राप्त करें।"
+           data-en="Learn about healthy lifestyles, good habits and health education.">
+          स्वस्थ जीवनशैली, अच्छी आदतों और स्वास्थ्य शिक्षा के बारे में जानकारी प्राप्त करें।
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow-sm">
+        <div class="text-4xl mb-4">🎯</div>
+        <h3 class="text-xl font-bold mb-3" data-hi="व्यक्तिगत विकास" data-en="Personal Development">व्यक्तिगत विकास</h3>
+        <p class="text-gray-600 leading-7"
+           data-hi="सकारात्मक सोच, लक्ष्य निर्धारण, अनुशासन और नेतृत्व कौशल को विकसित करें।"
+           data-en="Develop positive thinking, goal setting, discipline and leadership skills.">
+          सकारात्मक सोच, लक्ष्य निर्धारण, अनुशासन और नेतृत्व कौशल को विकसित करें।
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow-sm">
+        <div class="text-4xl mb-4">🤝</div>
+        <h3 class="text-xl font-bold mb-3" data-hi="सीखें और आगे बढ़ें" data-en="Learn and Grow">सीखें और आगे बढ़ें</h3>
+        <p class="text-gray-600 leading-7"
+           data-hi="नई जानकारी प्राप्त करें, लोगों से जुड़ें और अपने विकास के अवसरों को समझें।"
+           data-en="Gain new knowledge, connect with people and explore opportunities for growth.">
+          नई जानकारी प्राप्त करें, लोगों से जुड़ें और अपने विकास के अवसरों को समझें।
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="wellness-sathi" class="py-12 px-4 bg-white">
+  <div class="max-w-4xl mx-auto text-center bg-green-50 rounded-2xl p-8 shadow-sm">
+    <div class="text-5xl mb-4">🌿</div>
+    <h2 class="text-2xl md:text-3xl font-bold text-green-800 mb-4"
+        data-hi="V-Fitt Wellness Sathi" data-en="V-Fitt Wellness Sathi">V-Fitt Wellness Sathi</h2>
+
+    <p class="text-gray-600 mb-6 leading-7"
+       data-hi="स्वास्थ्य और वेलनेस से जुड़ी जानकारी प्राप्त करें। अपने स्वास्थ्य जागरूकता के सफर की शुरुआत करें।"
+       data-en="Explore health and wellness information. Begin your journey toward better health awareness.">
+      स्वास्थ्य और वेलनेस से जुड़ी जानकारी प्राप्त करें। अपने स्वास्थ्य जागरूकता के सफर की शुरुआत करें।
+    </p>
+
+    <a href="https://v-fitt-wellness-sathi.lovable.app" target="_blank" rel="noopener noreferrer"
+       class="inline-block green-button font-bold px-7 py-3 rounded-full shadow"
+       data-hi="Wellness Sathi खोलें →" data-en="Open Wellness Sathi →">Wellness Sathi खोलें →</a>
+  </div>
+</section>
+
+<section id="contact" class="py-16 px-4">
+  <div class="max-w-xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-9">
+    <h2 class="text-3xl font-bold text-center text-green-800 mb-3"
+        data-hi="हमसे जुड़ें" data-en="Get in Touch">हमसे जुड़ें</h2>
+
+    <p class="text-center text-gray-600 mb-7"
+       data-hi="नीचे अपनी जानकारी भरें। हम आपसे संपर्क करेंगे।"
+       data-en="Fill in your details below and we will contact you.">
+      नीचे अपनी जानकारी भरें। हम आपसे संपर्क करेंगे।
+    </p>
+
+    <form id="leadForm" class="space-y-5">
+      <div>
+        <label for="name" class="block font-semibold mb-2"
+               data-hi="आपका नाम *" data-en="Your Name *">आपका नाम *</label>
+        <input type="text" id="name" name="name" required maxlength="100" autocomplete="name"
+          placeholder="अपना पूरा नाम लिखें" data-placeholder-hi="अपना पूरा नाम लिखें" data-placeholder-en="Enter your full name"
+          class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-600">
+      </div>
 
       <div>
-        <h1 class="text-2xl font-extrabold text-green-800">
-          V-FITT2
-        </h1>
-        <p class="text-sm text-gray-600">
-          स्वास्थ्य और सफलता का सूत्र
-        </p>
+        <label for="phone" class="block font-semibold mb-2"
+               data-hi="मोबाइल नंबर *" data-en="Mobile Number *">मोबाइल नंबर *</label>
+        <input type="tel" id="phone" name="phone" required maxlength="25" autocomplete="tel"
+          placeholder="अपना मोबाइल नंबर लिखें" data-placeholder-hi="अपना मोबाइल नंबर लिखें" data-placeholder-en="Enter your mobile number"
+          class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-600">
       </div>
 
-      <a href="#contact"
-         class="green-button px-5 py-2 rounded-full font-semibold">
-        जुड़ें
-      </a>
-
-    </div>
-  </header>
-
-
-  <!-- HERO SECTION -->
-  <section class="hero-bg text-white">
-    <div class="max-w-6xl mx-auto px-5 py-16 md:py-24 text-center">
-
-      <p class="text-green-200 font-semibold mb-3">
-        V-Fitt2 Health & Wellness
-      </p>
-
-      <h2 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
-        बेहतर स्वास्थ्य,<br>
-        बेहतर सोच, बेहतर भविष्य
-      </h2>
-
-      <p class="text-lg md:text-xl text-green-50 max-w-2xl mx-auto mb-8">
-        स्वास्थ्य शिक्षा, व्यक्तिगत विकास और सफलता की दिशा में
-        अपने सफर की शुरुआत करें।
-      </p>
-
-      <a href="#contact"
-         class="inline-block bg-white text-green-800 font-bold px-7 py-3 rounded-full shadow hover:bg-green-100">
-        आज ही संपर्क करें
-      </a>
-
-    </div>
-  </section>
-
-
-  <!-- ABOUT SECTION -->
-  <section class="py-14 px-4">
-    <div class="max-w-5xl mx-auto text-center">
-
-      <h2 class="text-3xl font-bold text-green-800 mb-5">
-        V-Fitt2 के बारे में
-      </h2>
-
-      <p class="text-lg leading-8 text-gray-600">
-        V-Fitt2 का उद्देश्य स्वास्थ्य और सफलता के प्रति जागरूकता
-        बढ़ाना है। सही जानकारी, अच्छी आदतें और लगातार सीखने की
-        सोच से अपने जीवन को बेहतर बनाने की दिशा में कदम बढ़ाएँ।
-      </p>
-
-    </div>
-  </section>
-
-
-  <!-- FEATURES SECTION -->
-  <section class="bg-green-50 py-14 px-4">
-    <div class="max-w-6xl mx-auto">
-
-      <h2 class="text-3xl font-bold text-center text-green-800 mb-10">
-        हमारे मुख्य विषय
-      </h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <div class="bg-white rounded-2xl p-6 shadow-sm">
-          <div class="text-4xl mb-4">🌿</div>
-          <h3 class="text-xl font-bold mb-3">
-            स्वास्थ्य जागरूकता
-          </h3>
-          <p class="text-gray-600 leading-7">
-            स्वस्थ जीवनशैली, अच्छी आदतों और स्वास्थ्य शिक्षा
-            के बारे में जानकारी प्राप्त करें।
-          </p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-6 shadow-sm">
-          <div class="text-4xl mb-4">🎯</div>
-          <h3 class="text-xl font-bold mb-3">
-            व्यक्तिगत विकास
-          </h3>
-          <p class="text-gray-600 leading-7">
-            सकारात्मक सोच, लक्ष्य निर्धारण, अनुशासन और
-            नेतृत्व कौशल को विकसित करें।
-          </p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-6 shadow-sm">
-          <div class="text-4xl mb-4">🤝</div>
-          <h3 class="text-xl font-bold mb-3">
-            सीखें और आगे बढ़ें
-          </h3>
-          <p class="text-gray-600 leading-7">
-            नई जानकारी प्राप्त करें, लोगों से जुड़ें और
-            अपने विकास के अवसरों को समझें।
-          </p>
-        </div>
-
+      <div>
+        <label for="message" class="block font-semibold mb-2"
+               data-hi="आपका संदेश" data-en="Your Message">आपका संदेश</label>
+        <textarea id="message" name="message" rows="4" maxlength="1000"
+          placeholder="आप किस विषय में जानकारी चाहते हैं?" data-placeholder-hi="आप किस विषय में जानकारी चाहते हैं?" data-placeholder-en="What would you like to know about?"
+          class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-600"></textarea>
       </div>
-    </div>
-  </section>
 
+      <button type="submit" id="submitButton"
+        class="green-button w-full py-3 rounded-lg font-bold text-lg"
+        data-hi="फॉर्म भेजें और WhatsApp खोलें" data-en="Submit Form & Open WhatsApp">
+        फॉर्म भेजें और WhatsApp खोलें
+      </button>
 
-  <!-- V-FITT WELLNESS SATHI SECTION -->
-  <section id="wellness-sathi" class="py-12 px-4 bg-white">
-    <div class="max-w-4xl mx-auto text-center bg-green-50 rounded-2xl p-8 shadow-sm">
+      <p id="formStatus" role="status" aria-live="polite" class="text-sm text-center text-gray-600"></p>
+    </form>
+  </div>
+</section>
 
-      <div class="text-5xl mb-4">🌿</div>
+<footer class="bg-gray-900 text-white py-8 px-4">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-2xl font-bold mb-2">V-FITT2</h2>
+    <p class="text-gray-300 mb-4"
+       data-hi="स्वास्थ्य और सफलता का सूत्र" data-en="The Formula for Health and Success">स्वास्थ्य और सफलता का सूत्र</p>
+    <p class="mb-2">Wellness Coach: J.D. Ansari</p>
 
-      <h2 class="text-2xl md:text-3xl font-bold text-green-800 mb-4">
-        V-Fitt Wellness Sathi
-      </h2>
+    <p class="mb-2">
+      <span data-hi="संपर्क:" data-en="Contact:">संपर्क:</span>
+      <a href="https://wa.me/917703023914" target="_blank" rel="noopener noreferrer" class="text-green-300 underline">+91 7703023914</a>
+    </p>
 
-      <p class="text-gray-600 mb-6 leading-7">
-        स्वास्थ्य और वेलनेस से जुड़ी जानकारी प्राप्त करें।
-        अपने स्वास्थ्य जागरूकता के सफर की शुरुआत करें।
-      </p>
+    <p class="mb-4">
+      Instagram:
+      <a href="https://www.instagram.com/jdansari7/" target="_blank" rel="noopener noreferrer" class="text-green-300 underline">@jdansari7</a>
+    </p>
 
-      <a
-        href="https://v-fitt-wellness-sathi.lovable.app"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-block green-button font-bold px-7 py-3 rounded-full shadow">
-        Wellness Sathi खोलें →
-      </a>
+    <p class="text-sm text-gray-400">
+      © <span id="currentYear"></span> V-Fitt2. <span data-hi="सर्वाधिकार सुरक्षित।" data-en="All rights reserved.">सर्वाधिकार सुरक्षित।</span>
+    </p>
+  </div>
+</footer>
 
-    </div>
-  </section>
+<script>
+  const WEB_APP_URL =
+    "https://script.google.com/macros/s/AKfycbzVwNzUwrcEmC7WsF7Ew1dFOGnRGQO9PJ54ywzJvjqaZ1AG6LX1HoRQOBPZ7-WyouPV/exec";
 
+  let currentLanguage = localStorage.getItem("vfitt2-language") || "hi";
 
-  <!-- CONTACT / LEAD FORM -->
-  <section id="contact" class="py-16 px-4">
-    <div class="max-w-xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-9">
+  function setLanguage(language) {
+    currentLanguage = language;
+    localStorage.setItem("vfitt2-language", language);
 
-      <h2 class="text-3xl font-bold text-center text-green-800 mb-3">
-        हमसे जुड़ें
-      </h2>
+    document.documentElement.lang = language;
 
-      <p class="text-center text-gray-600 mb-7">
-        नीचे अपनी जानकारी भरें। हम आपसे संपर्क करेंगे।
-      </p>
+    document.querySelectorAll("[data-hi][data-en]").forEach(function(element) {
+      element.innerHTML = element.getAttribute("data-" + language);
+    });
 
-      <form id="leadForm" class="space-y-5">
+    document.querySelectorAll("[data-placeholder-hi][data-placeholder-en]").forEach(function(element) {
+      element.placeholder = element.getAttribute("data-placeholder-" + language);
+    });
 
-        <div>
-          <label for="name" class="block font-semibold mb-2">
-            आपका नाम *
-          </label>
+    document.getElementById("hindiBtn").classList.toggle("active", language === "hi");
+    document.getElementById("englishBtn").classList.toggle("active", language === "en");
+  }
 
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            maxlength="100"
-            autocomplete="name"
-            placeholder="अपना पूरा नाम लिखें"
-            class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-600">
-        </div>
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+  setLanguage(currentLanguage);
 
-        <div>
-          <label for="phone" class="block font-semibold mb-2">
-            मोबाइल नंबर *
-          </label>
+  document.getElementById("leadForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            required
-            maxlength="25"
-            autocomplete="tel"
-            placeholder="अपना मोबाइल नंबर लिखें"
-            class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-600">
-        </div>
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const status = document.getElementById("formStatus");
+    const submitButton = document.getElementById("submitButton");
 
-        <div>
-          <label for="message" class="block font-semibold mb-2">
-            आपका संदेश
-          </label>
+    if (!name || !phone) {
+      status.textContent = currentLanguage === "hi"
+        ? "कृपया अपना नाम और मोबाइल नंबर भरें।"
+        : "Please enter your name and mobile number.";
+      return;
+    }
 
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            maxlength="1000"
-            placeholder="आप किस विषय में जानकारी चाहते हैं?"
-            class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-600"></textarea>
-        </div>
+    const data = { name: name, phone: phone, message: message };
 
-        <button
-          type="submit"
-          id="submitButton"
-          class="green-button w-full py-3 rounded-lg font-bold text-lg">
-          फॉर्म भेजें और WhatsApp खोलें
-        </button>
+    const whatsappText =
+      "Hello V-FITT2\n" +
+      "Name: " + name + "\n" +
+      "Phone: " + phone + "\n" +
+      "Message: " + (message || "No message");
 
-        <p id="formStatus"
-           role="status"
-           aria-live="polite"
-           class="text-sm text-center text-gray-600">
-        </p>
-
-      </form>
-    </div>
-  </section>
-
-
-  <!-- FOOTER -->
-  <footer class="bg-gray-900 text-white py-8 px-4">
-    <div class="max-w-5xl mx-auto text-center">
-
-      <h2 class="text-2xl font-bold mb-2">V-FITT2</h2>
-
-      <p class="text-gray-300 mb-4">
-        स्वास्थ्य और सफलता का सूत्र
-      </p>
-
-      <p class="mb-2">
-        Wellness Coach: J.D. Ansari
-      </p>
-
-      <p class="mb-2">
-        संपर्क:
-        <a href="https://wa.me/917703023914"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="text-green-300 underline">
-          +91 7703023914
-        </a>
-      </p>
-
-      <p class="mb-4">
-        Instagram:
-        <a href="https://www.instagram.com/jdansari7/"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="text-green-300 underline">
-          @jdansari7
-        </a>
-      </p>
-
-      <p class="text-sm text-gray-400">
-        © <span id="currentYear"></span> V-Fitt2. All rights reserved.
-      </p>
-
-    </div>
-  </footer>
-
-
-  <!-- GOOGLE SHEETS + WHATSAPP FORM CONNECTION -->
-  <script>
-    const WEB_APP_URL =
-      "https://script.google.com/macros/s/AKfycbzVwNzUwrcEmC7WsF7Ew1dFOGnRGQO9PJ54ywzJvjqaZ1AG6LX1HoRQOBPZ7-WyouPV/exec";
-
-    document.getElementById("currentYear").textContent =
-      new Date().getFullYear();
-
-    document.getElementById("leadForm").addEventListener(
-      "submit",
-      function(event) {
-        event.preventDefault();
-
-        const name =
-          document.getElementById("name").value.trim();
-
-        const phone =
-          document.getElementById("phone").value.trim();
-
-        const message =
-          document.getElementById("message").value.trim();
-
-        const status =
-          document.getElementById("formStatus");
-
-        const submitButton =
-          document.getElementById("submitButton");
-
-        if (!name || !phone) {
-          status.textContent =
-            "कृपया अपना नाम और मोबाइल नंबर भरें।";
-          return;
-        }
-
-        const data = {
-          name: name,
-          phone: phone,
-          message: message
-        };
-
-        const whatsappText =
-          "Hello V-FITT2\n" +
-          "Name: " + name + "\n" +
-          "Phone: " + phone + "\n" +
-          "Message: " + (message || "No message");
-
-        const whatsappUrl =
-          "https://wa.me/917703023914?text=" +
-          encodeURIComponent(whatsappText);
-
-        const whatsappWindow =
-          window.open(whatsappUrl, "_blank");
-
-        submitButton.disabled = true;
-        submitButton.textContent = "भेजा जा रहा है...";
-
-        fetch(WEB_APP_URL, {
-          method: "POST",
-          mode: "no-cors",
-          headers: {
-            "Content-Type": "text/plain;charset=utf-8"
-          },
-          body: JSON.stringify(data)
-        })
-        .then(function() {
-          status.textContent =
-            "फॉर्म भेजने की रिक्वेस्ट की गई है। WhatsApp में संदेश भी भेजें।";
-        })
-        .catch(function(error) {
-          console.error("Form submission error:", error);
-
-          status.textContent =
-            "कनेक्शन में समस्या हो सकती है। कृपया दोबारा कोशिश करें।";
-        })
-        .finally(function() {
-          submitButton.disabled = false;
-          submitButton.textContent =
-            "फॉर्म भेजें और WhatsApp खोलें";
-        });
-
-        if (!whatsappWindow) {
-          status.textContent =
-            "WhatsApp नहीं खुला। पॉप-अप अनुमति दें या WhatsApp लिंक खोलें।";
-        }
-      }
+    window.open(
+      "https://wa.me/917703023914?text=" + encodeURIComponent(whatsappText),
+      "_blank"
     );
-  </script>
+
+    submitButton.disabled = true;
+    submitButton.textContent = currentLanguage === "hi" ? "भेजा जा रहा है..." : "Submitting...";
+
+    fetch(WEB_APP_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(data)
+    })
+    .then(function() {
+      status.textContent = currentLanguage === "hi"
+        ? "फॉर्म भेजने की रिक्वेस्ट की गई है। WhatsApp में संदेश भेजना भी न भूलें।"
+        : "Form submission was requested. Please remember to send the message in WhatsApp too.";
+    })
+    .catch(function() {
+      status.textContent = currentLanguage === "hi"
+        ? "कनेक्शन में समस्या हो सकती है। कृपया दोबारा कोशिश करें।"
+        : "There may be a connection issue. Please try again.";
+    })
+    .finally(function() {
+      submitButton.disabled = false;
+      submitButton.textContent = currentLanguage === "hi"
+        ? "फॉर्म भेजें और WhatsApp खोलें"
+        : "Submit Form & Open WhatsApp";
+    });
+  });
+</script>
 
 </body>
 </html>
